@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git and github blog</title>
+</head>
+
+<body>
+    <h1><b>Everyday git</b></h1>
+
+    <!-- What is git  -->
+    <div>
+        <h2><b>1. What is git</b></h2>
+        <p>Git is a version control system, that is used for source code management in software development. A version
+            control, also referred to as <i>source control</i>, is the practice of tracking and managing changes to software
+            code over time in the software development process. Version control helps to track any changes made in the
+            code and in a special kind of database. Any mistake that is made, developers can turn back the clock and
+            compare ealier versions of the code to help fix the mistake while at the same time minimizing disruption to
+            the other developers.
+        <ul>
+            <p>There are other types of version control in existence include:</p>
+            <li>Gitlab</li>
+            <li>Bitbucket</li>
+            <li>Subversion</li>
+            <li>SVN</li>
+            <li>Centralized version control and, </li>
+            <li>Distributed version control.</li>
+            </p>
+        </ul>
+        <p>In this blog, my focus will be on <em><b>Git</b></em> and <em><b>Github</b></em> as a control version.
+
+        </p>
+    </div>
+
+    <!-- Installing git -->
+
+    <div>
+        <h2><b>2. Installing git</b></h2>
+        <ul>
+            <li><p>Before you begin to use Git, first check whether is installed in your machine. To check if Git is installed
+                in your machine type the command <b>git</b> in your command prompt. If you see git usage screen then it is
+                already installed. 
+            <li><p>If Git is not installed in your local machine, <i>follow this link to the official website and download Git for your respective operating system</i> <a href="https://git-scm.com/download/win" target="_blank">Download Git</a>and install it.</p></li>
+            <li><p>To check if Git has been installed and its version, type the command <b>git --version</b> as shown in the below.<p></p></li>
+            <img src="assets/gitVersion.JPG" width="800px" alt="Image showing the results of the command git --version">
+            <figcaption><i>fig:- </i> How to check the version of Git installed in your local machine.</figcaption></li>
+        </ul>
+    </div>
+
+    <!-- configuring git  -->
+    <div>
+        <h2><b>3. Configuring Git</b></h2>
+        <ul>
+            <li><p>Git comes with a tool called <em><strong>git config</strong></em> that lets you get and set configuration variables such as <i>(user email address and user name)</i> that control all aspects of how Git looks and operates. The <em><strong>git config</strong></em> command is used to set Git configuration values on a global or local project. <br>
+                Run the command below to configure your email address as follows.
+            </p>
+            <img src="assets/configEmail.JPG" width="800px" alt="How to configure email address">
+            <figcaption><i>fig:- </i> How to configure users email address.</figcaption></li>
+            <li><p>To configure your user name, type the commands shown below.</p>
+                <img src="assets/configName.JPG" width="800px" alt="How to configure your user names.">
+                <figcaption><i>fig:- </i> How to configure users name.</figcaption></li>
+            <li><p>If any error is made when configuring either the user name or the email address, you can rewrite the command with the correct user name or email address. The previously written name or email address will be overwritten with the correct one. <br> Notably, you can check the configured name or email address using the commands as follows:</p>
+                <img src="assets/checkName.JPG" width="800px" alt="How to check configured name on command prompt.">
+                <figcaption><i>fig:- </i> How to check configured name on command prompt.</figcaption></li>
+            <li><p>Checking email address</p>
+                <img src="assets/checkEmail.JPG" width="800px" alt="How to check configured email address on command prompt.">
+                <figcaption><i>fig:- </i> How to check configured email address on command prompt.</figcaption></li>
+        </ul>
+    
+        
+    </div>
+
+    <!-- Initializing a git repository -->
+    <div>
+        <h2><b>4. Intializing a Git repository</b></h2>
+        <ul>
+            <li><p>A Git repository is a central storage location for managing and tracking changes in files and directories. Itis a crucial component of Git verson control which enable collaborative development and facilitating efficient and controlled code management. A Git repository stores all the versions of files within a project, enabling developers to track changes, collaborate, and easily revert to previous versions if needed.</p>
+            </li>
+        </ul>
+        <ol>
+            <p><b>Steps on how to initialize a git repository.</b></p>
+            <li><p>Create a folder in your local disk for storing project files.</p></li>
+            <li><p>Open the command prompt from the folder.</p></li>
+            <li><p>Check if the folder is already inintialized for git. Type the command <em>git status</em> in the command prompt as shown below.</p></li>
+            <img src="assets/gitStatus.JPG" width="800px" alt="Checking if a folder has been initialized to be a git repository.">
+            <figcaption><i>fig:- </i> How to check the status of a repository, if it is already a git repository or not.</figcaption>
+            <li><p>If it show the message <i>No commits yet</i>, initialize enter the command <b>git init</b> to initialize the folder as a git repository. All the files involved in the project should be stored in this folder for tracking changes and errors made.</p></li>
+            <img src="assets/git init.JPG"  width="800px" alt="Initializing a folder to be a git repository.">
+            <figcaption><i>fig:- </i> Command to initialize a git repository.</figcaption>
+        </ol>
+    </div>
+
+    <div>
+        <h2><b>5. Adding files to the staging area</b></h2>
+        <p><b>What is a staging area?</b></p>
+        <ul>
+            <li><p>Git staging area is an intermediate are that stores changes to tracked files before they are committed to the repository. You can add or remove files from the staging area to control which changes are included in the next commit. <br>
+                You an add or remove files to the staging area to determine which files you want to push to the repository.</p></li>
+            <li> <p>You can add a single file at an instance to the staging area using the command <b>git add <i>filename</i></b>. as demostrated below.</p>
+                <img src="assets/OnefiletoStagingArea.JPG" width="800px" alt="How to add a single file to the staging area.">
+                <figcaption><i>fig:- </i> How to add a single file to the staging area.</figcaption></li>
+            <li><p>To add more the one file to the staging area at an instance, using the dot <b>(.)</b> operator in the add command as follows. <b>git add .</b></p>
+                <img src="assets/manyFiles.JPG" width="800px" alt="How to add many files to the staging area.">
+                <figcaption><i>fig:- </i> How to add many files to the staging area using the dot (.) operator.</figcaption></li>
+            <li><p>Subsequently, you can remove files from the staging area using the <b>git rm --cached <i>filepath</i></b> <pathspec> command. <br>
+                For example, to remove the file <i>textFile1.txt</i> as shown below.</p>
+                <img src="assets/unstageAFile.JPG" width="800px" alt="Removing a file from the staged area.">
+                <figcaption><i>fig:- </i> How to remove a file from the staging area.</figcaption></li>
+        </ul>
+    </div>
+
+    <!-- Commiting changes -->
+    <div>
+        <h2><b>6. Commiting changes.</b></h2>
+        <ul>
+            <li><p>The command <b>git commit</b> is used to save all staged changes, along with a brief descripiton from the user, in a <i>commit</i> to the local repository.</li>
+            <li> A commit basically acts as a snapshot of your project, where a new version of that projecy is created in the current repository.</p></li>
+            <li><p>The <b>-m</b> option stands for a message. When calling the <b>git commit</b> command it is crucial to include a description of the changes being committed. The message should be wrapped in quotations <b>(" ")</b>.</p></li>
+            <li><b>git commit -m <i>"commit message"</i></b></li>
+            <p><b><br>Tracking commit history</b></p>
+            <li>The command <b>git log</b> is used to display all the commits in a repository's history. It helps developers list the project history, filter it, and search for a specific changes.</li>
+            <img src="assets/gitLog.JPG" width="800px" alt="git log.">
+            <figcaption><i>fig:- </i> Using <b>git log</b>  command to list the history all commits.</figcaption>
+            <br><li>The commands <b>git log --oneline</b> is used to condence the lengthy <b>git log</b> output into a single line, well formatted output of the commits. The command only displays the commit ID and the first line of the commit message as shown below.</li>
+            <img src="assets/gitLogOneLine.JPG" width="800px" alt="Shortened output of git log in a single line">
+            <figcaption><i>fig:- </i> <b>Git log</b> shortened output using <b>git log --oneline</b></figcaption>
+            <li><p>The <b>--amend</b> option allows you to change your last commit message. Example below.</p></li>
+            <img src="assets/gitAmend.JPG" width="800px" alt="How to change incorrect commit message using the --ammend option.">
+            <figcaption><i>fig:- </i> How to change an error made in a commit using <b>--amend</b> option.</figcaption>
+            <li><p>You can revert back to a previous commit message using the <b>git revert <i>commitID</i></b>. This command figures out how to reverse the changes created by that specific commit, then append a new commit containing the new inversed content.</p></li>
+            <img src="assets/gitRevert.JPG" width="800px" alt="How to revert back to a previous commit.">
+            <figcaption><i>fig:- </i> Using <b>git revert commitID</b> to revert back to a previously made commit to revert changes.</figcaption>
+        </ul>
+        <h4>Guideliness on how to write a good commit messages.</h4>
+        <ol>
+            <li>Obey the 50-character limit for the subject line.</li>
+            <li>Capitalize just the first letter in the subject line.</li>
+            <li>Do not place a period at the end of the subject line.</li>
+            <li>Place a blank line between the subject line and the body of the message.</li>
+            <li>Limit the message body width to 72 characters.</li>
+            <li>Explain what was done and why it was done, but not how it was done.</li>
+        </ol>        
+    </div>
+
+    <!-- 8. Branches -->
+    <div>
+        <h2><b>7. Branches</b></h2>
+        <ul>
+            <li><p>In Git, a branch is a new separate versionof the main repository. Branches allow working on different parts of the project, such as <i>fixing a specific error in a file.</i> without interfering with the main branch. When the work on the newly created branch is complete, the branch is merged with the main project to implement the changes made.</p>
+            <li><p>Branching means you diverge from the main line of development and continue to do work without messing with that main line.</p>
+        </ul>
+    </div>
+
+    <!-- 9. Creating a branch -->
+    <div>
+        <h2><b>8. Creating a branch</b></h2>
+        <ul>
+            <li><p>Create a new branch using the command <b>git branch <i>branchName. </i></b>Example.</p>
+                <img src="assets/gitBranch.JPG" width="800px"  alt="Creating a new branch">
+                <figcaption><i>fig:- </i> How to create a new branch using the command <b>git branch <i>branchName</i></b></figcaption></li>
+        </ul>
+    </div>
+
+    <!-- Viewing all branches -->
+    <div>
+        <h2><b>9. Viewing all branches</b></h2>
+        <ul>
+            <li><p>To view all the branches locally in repository, run the command <b>git branch</b>. The branch that will have an asterick and fairly a different color from the rest indicated the current branch. Example</p>
+                <img src="assets/showBranch.JPG" width="800px" alt="View all the branches">
+                <figcaption><i>fig:- </i> To view branches locally in the repository.</figcaption></li> <br>
+            <li><p>To see remote branches. Run command <b>git branch <i>-r</i></b></p>
+                <img src="assets/gitLocalBranches.JPG" width="800px" alt="To view all branches in the remote repo.">
+                <figcaption><i>fig:- </i> Command to view branches in the remote repository</figcaption></li> <br>
+            <li><p>To see branches both locally and remote, run the command <b>git branch <i>-a</i></b></p>
+                <img src="assets/gitRemoteLocal.JPG" width="800px" alt="To view branches in both remote and local repository.">
+                <figcaption><i>fig:- </i> Command to view branches both in remote and local repository all together.</figcaption></li>
+        </ul>
+    </div>
+
+    <!-- 11. Switching active branches -->
+    <div>
+        <h2><b>10. Switching active branches</b></h2>
+        <ul>
+            <li><p>Run the command <b>git checkout <i>branchName</i></b>. This command is used to move us from the current branch to the specified branch as shown below.</p></li>
+                <img src="assets/gitSwitchBranch.JPG" width="800px" alt="Switching between branches.">
+                <figcaption><i>fig:- </i> How to switch/checkout between braches.</figcaption> <br></li>
+        </ul>
+    </div>
+
+    <!-- 12. Merging a branch -->
+    <div>
+        <h2><b>11. Merging a branch</b></h2>
+        <ul>
+            <li><p>Basically, <b>Git merge</b> command will help to combine the changes from two or more branches into a single branch. <br>
+                <em><strong>Note:</strong> First, you must check out the branch that you want to merge another branch into (changes will be merged into this branch).</em></b></p></li>
+            <li><p>To merge, run command <b>git merge branchName</b></p></li>
+            <img src="assets/gitMerge.JPG" width="800px" alt="How to merge branches.">
+            <figcaption><i>fig:- </i> Command to merge branches together.</figcaption>
+        </ul>
+    </div>
+
+    <!-- 13. Deleting a branch -->
+    <div>
+        <h2><b>12. Deleting a branch</b></h2>
+        <ul>
+            <li><p>To delete a branch, run the command <b>git branch -D <i>branchName.</i></b>. Example</p></li>
+            <img src="assets/gitSingleDelete.JPG" width="800px" alt="Deleting a single branch.">
+            <figcaption><i>fig:- </i> How to delete a branch.</figcaption>
+            <li><p>To add on, you can delete multiple branches using the same command, and include the branch names to delete separating with a space.</p></li>
+            <img src="assets/gitMultipleDelete.JPG" width="800px" alt="Deleting multiple branches.">
+            <figcaption><i>fig:- </i>How to delete more than one branch at once.</figcaption>
+        </ul>
+    </div>
+
+    <br><br><br>
+    <p> <b>Thank you for reading through.</b></p>
+</body>
+
+</html>
